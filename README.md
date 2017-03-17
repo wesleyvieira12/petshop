@@ -1,4 +1,9 @@
 # Desafio para a Oportunidade Rails Developer
+
+Requisitos:
+*Ruby: 2.3.3
+*Rails: 5.0.2
+
 Olá! Estamos enviando aqui um desafio de desenvolvimento usando Ruby on Rails que você precisa nos entregar em até 7 dias.
 Problema
 Temos uma Pet Shop especializada em cachorros e queremos uma listagem simples, mas com filtro básicos, dos animais (cachorros) que já passaram pela Pet Shop.
