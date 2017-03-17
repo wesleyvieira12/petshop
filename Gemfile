@@ -5,6 +5,20 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+####### MINHAS GENS #################
+
+gem 'bootstrap_sb_admin_base_v2'
+gem 'devise-bootstrap-views'
+gem "therubyracer"
+gem "twitter-bootstrap-rails"
+gem 'devise'
+gem 'ransack'
+gem 'carrierwave', '~> 1.0'
+gem 'autoprefixer-rails','~> 6.4'
+gem 'will_paginate-bootstrap'
+gem "rmagick"
+
+#####################################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

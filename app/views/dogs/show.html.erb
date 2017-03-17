@@ -1,0 +1,33 @@
+<%- model_class = Dog -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:race) %>:</strong></dt>
+  <dd><%= @dog.race %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
+  <dd><%= @dog.gender %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:castrated) %>:</strong></dt>
+  <dd><%= @dog.castrated ?  "Sim" : "Não"%></dd>
+  <dt><strong><%= model_class.human_attribute_name(:birthday) %>:</strong></dt>
+  <dd><%= @dog.birthday.strftime("%d/%m/%Y") %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @dog.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name_owner) %>:</strong></dt>
+  <dd><%= @dog.name_owner %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone) %>:</strong></dt>
+  <dd><%= @dog.phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:updated_at) %>:</strong></dt>
+  <dd><%= @dog.updated_at.strftime("%d/%m/%Y, %H:%M") %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              dogs_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_dog_path(@dog), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              dog_path(@dog),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,30 @@
+pt_BR:
+  activerecord:
+    models:
+      dog:
+        one: Cachorro
+        Other: Cachorros
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      dog:
+        id: '#'
+        name: Nome
+        race: Raça
+        gender: Gerero
+        castrated: Castrado
+        birthday: Data de nascimento
+        name_owner: Nome do dono
+        phone: Telefone
+        created_at: Criado em
+        updated_at: Ultima vez
+      user:
+        id: '#'
+        email: E-mail
+        password: Senha
+        password_confirmation: "Confirmar senha"
+        current_password: "Senha atual"
+        created_at: Criado em
+        updated_at: Atualizado em
+      

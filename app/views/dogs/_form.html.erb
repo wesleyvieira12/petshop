@@ -1,0 +1,78 @@
+<%= form_for @dog, :html => { :class => "form-horizontal dog" } do |f| %>
+
+  <% if @dog.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@dog.errors.count, "erro", "erros") %>:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @dog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :race, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :race, :class => 'form-control' %>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <%= f.label :gender, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.select :gender, options_for_select([["Macho", "M"], ["Fêmea", "F"]]),{}, class: "form-control" %>   
+    </div>
+
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :birthday, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.date_field :birthday, :class => 'form-control' %>
+    </div>
+    
+  </div>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    
+  </div>
+  <div class="form-group">
+    <%= f.label :name_owner, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name_owner, :class => 'form-control' %>
+    </div>
+    
+  </div>
+  <div class="form-group">
+    <%= f.label :phone, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :phone, :class => 'form-control' %>
+    </div>
+    
+  </div>
+  <div class="form-group">
+    <%= f.label :castrated, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.check_box :castrated%>
+      
+    </div>
+    
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                dogs_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  race: MyString
+  gender: 1
+  castrated: false
+  birthday: 2017-03-17
+  name: MyString
+  name_owner: MyString
+  phone: MyString
+
+two:
+  race: MyString
+  gender: 1
+  castrated: false
+  birthday: 2017-03-17
+  name: MyString
+  name_owner: MyString
+  phone: MyString
