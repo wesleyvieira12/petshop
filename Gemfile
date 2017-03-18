@@ -7,16 +7,21 @@ end
 
 ####### MINHAS GENS #################
 
+#Serve para criação do layout painel administrativo
 gem 'bootstrap_sb_admin_base_v2'
-gem 'devise-bootstrap-views'
 gem "therubyracer"
 gem "twitter-bootstrap-rails"
+#Serve para estilizar as views do devise
+gem 'devise-bootstrap-views'
 gem 'devise'
+#Serve para pesquisas
 gem 'ransack'
+#Serve para upload de arquivos
 gem 'carrierwave', '~> 1.0'
-gem 'autoprefixer-rails','~> 6.4'
-gem 'will_paginate-bootstrap'
 gem "rmagick"
+gem 'autoprefixer-rails','~> 6.4'
+#Serve para criar as paginações
+gem 'will_paginate-bootstrap'
 
 #####################################
 
@@ -52,7 +57,14 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  ###### Realização de testes ###########
   gem 'rspec-rails', '~> 3.0'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  #######################################
+
 end
 
 group :development do
