@@ -32,10 +32,10 @@ Primeiro você deve já ter instalado os requisitos acima. Apos a instalação v
 
 O próximo passo você deve entrar na pasta onde esta o projeto baixado utilizando o terminal ou o CMD do windows e executar os seguintes comandos dentro dessa pasta:
 ```markdown
-  bundle install - **Baixa todas as gens declaradas no arquivo Gemfile**
-  rake db:migrate - **Cria o banco de dados e faz a migração das tabelas**
-  rake db:seed - **Cria dados para testes no banco de dados**
-  rails s ou rails server ou rails s -b 0.0.0.0 - **Inicia o servidor**
+  bundle install  **Baixa todas as gens declaradas no arquivo Gemfile**
+  rake db:migrate  **Cria o banco de dados e faz a migração das tabelas**
+  rake db:seed  **Cria dados para testes no banco de dados**
+  rails s ou rails server ou rails s -b 0.0.0.0  **Inicia o servidor**
 ```
 Agora você deve ir em seu navegador e digitar a seguinte url para que possa visualizar o sistema:
 ```markdown
@@ -52,6 +52,6 @@ Testes
 
 Para rodar os testes criados com RSPEC você deve estar na pasta do projeto e executar o seguinte comando:
 ```markdown
-  rake db:migrate RAILS_ENV=test - **cria o banco de teste**
-  rake spec - **executa os testes criados**
+  rake db:migrate RAILS_ENV=test  **cria o banco de teste**
+  rake spec **executa os testes criados**
 ```
