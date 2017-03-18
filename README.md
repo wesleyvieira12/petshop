@@ -25,7 +25,7 @@ Pré-Requisitos
 Como instalar
 -------------
 
-Primeiro você deve já ter instalado os requisitos acima. Apos a instalação você deve baixar o codigo do git fazendo o Download ou através do comando:
+Primeiro você deve já ter instalado os requisitos acima. Após a instalação você deve baixar o código do git fazendo o Download ou através do comando:
 ```markdown
  git clone https://github.com/wesleyvieira12/petshop.git
 ```
@@ -43,7 +43,7 @@ Agora você deve ir em seu navegador e digitar a seguinte url para que possa vis
 ```
 Para ter acesso você deve entrar com os seguintes dados de acesso:
 ```markdown
-  Email: adminintrador@email.com
+  Email: administrador@email.com
   Senha: 12345678
 ```
 
