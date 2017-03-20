@@ -60,9 +60,7 @@ group :development, :test do
 
   ###### Realização de testes ###########
   gem 'rspec-rails', '~> 3.0'
-  gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
-  gem 'selenium-webdriver'
+  gem 'capybara' 
   #######################################
 
 end
