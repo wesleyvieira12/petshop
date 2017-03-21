@@ -37,8 +37,7 @@
       <th><%= model_class.human_attribute_name(:race) %></th>
       <th><%= model_class.human_attribute_name(:name_owner) %></th>
       <th><%= sort_link(@q, :gender) %></th>
-      <th><%= sort_link(@q, :castrated) %></th>
-      <th><%= sort_link(@q, :birthday) %></th>
+      <th><%= sort_link(@q, :castrated) %></th>      
       <th><%= sort_link(@q, :updated_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -48,12 +47,11 @@
       <tr>
         <td><%= link_to dog.id, dog_path(dog) %></td>
         <td><%= dog.name %></td>
-        <td><%= dog.race %></td>
-        
+        <td><%= dog.race %></td>        
         <td><%= dog.name_owner %></td>        
         <td><%= dog.gender %></td>
         <td><%= dog.castrated ?  "Sim" : "Não"%></td>
-        <td><%= dog.birthday.strftime("%d/%m/%Y") %></td>
+        
         <td><%= dog.updated_at.strftime("%d/%m/%Y, %H:%M") %></td>
         <td>
           <%= link_to dog_path(dog), :class => 'btn btn-info btn-xs' do %>
@@ -68,6 +66,7 @@
                       :class => 'btn btn-xs btn-danger' do %>
                       <i class="fa fa-remove fa-fw"></i>
           <% end %>
+
           <%= link_to new_update_path(dog),:class => 'btn btn-success btn-xs' do %>
            <i class="fa fa-paw fa-fw"></i> Nova entrada
           <% end %>
