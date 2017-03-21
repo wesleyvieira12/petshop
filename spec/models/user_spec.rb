@@ -66,4 +66,49 @@ RSpec.feature "Modulo de Usuario" do
   	  	
   	  end
 
+  	  scenario "Editando usuario sem confirmar senha" do
+
+  	  	login_user
+
+  	  	visit "/users/edit"
+  	  	
+  	  	
+  	  	click_button 'Entrar'
+
+  	  	expect(page).to have_content "Confirmar senha não é igual a Senha"
+  	  	
+  	  end
+
+  	  scenario "Editando usuario sem senha atual" do
+		visit "users/edit"
+  	  	
+  	  	within("#edit_user") do
+  	  		fill_in 'E-mail', with: other_user.email
+  	  		fill_in 'Senha', with: "wesleyvieira12"
+  	  		fill_in 'Confirmar Senha', with: "wesleyvieira12"
+  	  		fill_in 'Senha atual', with: ""
+  	  	end
+  	  	
+  	  	click_button 'Update'
+
+  	  	expect(page).to have_content "Senha atual não pode ficar em branco"
+  	  	
+  	  end
+
+  	  scenario "Editando usuario sem erros" do
+  	  	visit "users/edit"
+  	  	
+  	  	within("#edit_user") do
+  	  		fill_in 'E-mail', with: other_user.email
+  	  		fill_in 'Senha', with: "wesleyvieira12"
+  	  		fill_in 'Confirmar Senha', with: "wesleyvieira12"
+  	  		fill_in 'Senha atual', with: other_user.password
+  	  	end
+  	  	
+  	  	click_button 'Entrar'
+
+  	  	expect(page).to have_content "Sua conta foi atualizada com sucesso."
+  	  	
+  	  end
+
 end
