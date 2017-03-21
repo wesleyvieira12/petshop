@@ -12,7 +12,7 @@ pt_BR:
         id: '#'
         name: Nome
         race: Raça
-        gender: Gerero
+        gender: Genero
         castrated: Castrado
         birthday: Data de nascimento
         name_owner: Nome do dono
