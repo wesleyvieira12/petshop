@@ -46,7 +46,7 @@ Para ter acesso você deve entrar com os seguintes dados de acesso:
   Email: administrador@email.com
   Senha: 12345678
 ```
-Foi realizado o deploy do sistema no HEROKU. Para acessar o sistema entre na url: http://petshop2017.herokuapp.com , o acesso é o mesmo que foi passado.
+Foi realizado o deploy do sistema no HEROKU. Para acessar o sistema entre na url: http://petshop2017.herokuapp.com , o acesso é o mesmo que foi passado. Também foi utilizado o Trello para organizar as tarefas que deviam ser realizadas (https://trello.com/b/yjaxBxnd/petshop).
 
 Testes
 -------------
