@@ -46,6 +46,7 @@ Para ter acesso você deve entrar com os seguintes dados de acesso:
   Email: administrador@email.com
   Senha: 12345678
 ```
+Foi realizado o deploy do sistema no HEROKU. Para acessar o sistema entre na url: http://petshop2017.herokuapp.com , o acesso é o mesmo que foi passado.
 
 Testes
 -------------
@@ -55,3 +56,9 @@ Para rodar os testes criados com RSPEC você deve estar na pasta do projeto e ex
   rake db:migrate RAILS_ENV=test  **cria o banco de teste**
   rake spec **executa os testes criados**
 ```
+
+Observações
+-------------
+
+Consegui desenvolver o sistema, mas queria ter criado alguma coisa com Angular JS ou React. Pois estou iniciando agora os estudos destas ferramentas.
+
