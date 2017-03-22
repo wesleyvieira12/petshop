@@ -30,7 +30,12 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
-   
+    <style type="text/css">
+    .margin-reset{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -57,8 +62,9 @@
                 <ul class="nav navbar-top-links navbar-right">
                     <!--USUARIO-->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i><%= current_user.email%> <i class="fa fa-caret-down"></i>
+
+                        <a class="dropdown-toggle margin-reset" data-toggle="dropdown" href="#">
+                           <%= image_tag(current_user.avatar.thumb, class: "img-circle") if current_user.avatar? %> <%= current_user.email%> <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li>

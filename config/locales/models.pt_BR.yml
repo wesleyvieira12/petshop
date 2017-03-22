@@ -21,6 +21,7 @@ pt_BR:
         updated_at: Ultima vez
       user:
         id: '#'
+        avatar: Foto
         email: E-mail
         password: Senha
         password_confirmation: "Confirmar senha"

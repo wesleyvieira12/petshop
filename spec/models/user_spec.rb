@@ -4,14 +4,14 @@ require 'rails_helper'
 RSpec.feature "Modulo de Usuario" do 
 
 	given(:user) { User.create(email: 'administrador@email.com', password: '12345678') }
-    given(:other_user) { User.create(email: 'other@example.com', password: 'rous') }
-
+  given(:other_user) { User.create(email: 'other@example.com', password: 'rous') }
 
   	scenario "Criando usuario valido" do
   	  	visit "users/sign_up"
   	  	
   	  	within("#new_user") do
   	  		fill_in 'E-mail', with: 'wesley@email.com'
+          attach_file('Foto', File.absolute_path('public/ale.png'))
   	  		fill_in 'Senha', with: '12345678'
   	  		fill_in 'Confirmar senha', with: '12345678'
   	  	end
